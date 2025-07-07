@@ -280,7 +280,7 @@ namespace RSA_Encryption
                 oldR = tempR; // store the previous remainder in oldR
 
                 BigInteger tempCoefficient = coefficient; // store c in temporary value so we can transfer it to oldC when done
-                coefficient = oldCoefficient - quotient * coefficient; // calculate coefficient by ...
+                coefficient = oldCoefficient - quotient * coefficient; // calculate coefficient using same algorithm as remainder
                 oldCoefficient = tempCoefficient; // store the previous coeffiecient in oldCoeffcient
             }
             return (oldCoefficient + phi) % phi;
